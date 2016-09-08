@@ -1,0 +1,60 @@
+xml version = "1.0" Codificación = "UTF-8"?>
+<! - Puede del editar Libremente Este archivo. Ver bloques Comentadas Por debajo de ->
+<! - ALGUNOS EJEMPLOS de Como Personalizar la Construcción. ->
+<! - (Si Lo Elimina y vuelve a abrir el Proyecto se Volverá a crear de.) ->
+<! - Por Defecto, solo la limpieza y construcción Comandos utilizan Este guión de construcción. ->
+<! - Cuentos de Como Comandos Ejecutar, depuración y prueba de los antes Como utilizar this Secuencia de Comandos de Generación SI ->
+<! - Al compilar y ahorrar en función f this desactivada para el Proyecto. ->
+<! - Puede del Desactivar la Compilación en Guardar (Guardar o Implementar en) el Establecimiento ->
+<! - En el cuadro de Diálogo Propiedades del Proyecto del Proyecto .-->
+<Nombre de Proyecto = "integracioncontinua-Tarea" default = basedir "default" = ".">
+    <Descripción> Construye, Pruebas, y se ejecuta el Proyecto integracioncontinua-Tarea. </ Description>
+    <Importación de Archivos = "nbproject / build-impl.xml" />
+    <! -
+    EXISTEN Varios Objetivos Que Son de forma predeterminada Vacío Y Que Se Puede 
+    utilizado para la Ejecucion de Sus Tareas. Estós: objetivos se ejecutan normalmente
+    antes y despues de algunos adj de los Objetivos Principales. Hijo:
+      -preparaciones de init: Llamada los antes de la Inicialización de las propiedades del Proyecto
+      -post-init: Llamada Despues de la Inicialización de las propiedades del Proyecto
+      -preparaciones de compilación: Llamado los antes de la compilación javac
+      -post-compilación: Llamada Despues de la compilación javac
+      prediseñadas en compilar Una Sola: Llamado los antes de la compilación javac de Una Sola Fila
+      -post-compilar Una Sola: Se llama Despues de la compilación javac de Una Sola Fila
+      -pre-compilación-test: Llamado los antes de la compilación javac de Pruebas JUnit
+      -post-compilar-test: Se llama Despues de la compilación javac de Pruebas JUnit
+      -pre-compile-prueba de Un Solo: Llamado los antes de la compilación javac de prueba unitaria sola
+      -post-compile-prueba de Un Solo: Se llama Despues de la compilación javac de prueba JUunit sola
+      -preparaciones de jar: Llamada de los antes Construir JAR
+      -post-jar: Llamada Despues de la construcción JAR
+      -post-clean: Llamada Despues de la limpieza de un Construir Productos
+    (Objetivos Que Comienzan con '-' no estan Destinados a Por Ser Llamado Cuenta Do).
+    Example de Inserción de la ONU obfuscador Despues de la compilación podria Tener Este aspecto m:
+        < Nombre de destino = " - Despues de la compilación " >
+            < Ofuscación >
+                < Conjunto de Archivos dir = " $ {} build.classes.dir " />
+            </ Ofuscación>
+        </ Target>
+    Para La Lista de Propiedades Disponibles comprobar v La Importada 
+    nbproject / build-impl.xml archivo. 
+    Otra forma de Personalizar la Construcción this reemplazando Objetivos Principales existentes.
+    Los Objetivos de Interés hijo: 
+      -init-macrodef-javac: definir un macro de compilación javac
+      -init-macrodef-junit: definir un macro Para La Ejecucion junit
+      -init-macrodef-debug: definir un macro para la depuración de Clases
+      -init-macrodef-java: definir un macro para la ejecucion de Clases
+      -do-jar: edificio JAR
+      ejecute: Ejecucion del Proyecto 
+      -javadoc-build: Javadoc Generación
+      prueba de Informe: La Generación de Informes JUnit
+    Un EJEMPLO de anular el objetivo m para la ejecucion del Proyecto podria Tener Este aspecto m:
+        < Meta name = " ejecucion " Depende = " integracioncontinua-Tarea-impl.jar " >
+            < Exec dir = " bin " ejecutable = " launcher.exe " >
+                < Arg file = " $ {} dist.jar " />
+            </ Exec>
+        </ Target>
+    Observar Que El objetivo m reemplazado Depende del destino frasco y sin Solo En 
+    el objetivo m de compilación Como el destino de ejecucion Hace normal. Una Vez Más, párrafo Obtener Una Lista de los Disponibles
+    Propiedades Que se pueden Como utilizar, compruebe el destino this sustituyendo en el
+    nbproject / build-impl.xml archivo. 
+    ->
+</ Proyecto>
